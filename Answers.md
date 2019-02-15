@@ -6,7 +6,7 @@ React JS is an open-source JS library, used for handling the front end of single
 
 1.  What does it mean to _think_ in react?
 
-To think in React means to think about how you will breka your project into small components in an effective manner.
+To think in React means to think about how you will break your project into small components in an effective manner.
 
 1.  Briefly describe some of the differences between a Class/Stateful component and a Functional/Presentational component.
 
