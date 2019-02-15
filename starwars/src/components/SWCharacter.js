@@ -15,20 +15,24 @@ const SWCharacter = props => {
             </li>
 
             <li>
-                <strong>Height:</strong> {props.character.height}
+                <strong>Height:</strong> {props.character.height}cm
             </li>
 
-            {/* <li>
-                <strong>Species:</strong> {props.character.species}
+            <li>
+                <strong>Mass:</strong> {props.character.mass}kg
             </li>
             
             <li>
-                <strong>Home World:</strong> {fetch(props.charcter.homeworld)}
+                <strong>Hair Color:</strong> {props.character.hair_color}
             </li>
             
             <li>
-                <strong>Films:</strong> {fetch(props.character.films)}
-            </li> */}
+                <strong>Skin Color:</strong> {props.character.skin_color}
+            </li>
+
+            <li>
+                <strong>Eye Color:</strong> {props.character.eye_color}
+            </li>
         </div>
     );
 }

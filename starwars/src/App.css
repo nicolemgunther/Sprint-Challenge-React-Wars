@@ -1,11 +1,25 @@
 .App {
   text-align: center;
 }
-.Header {
+
+.Header{
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Header h1{
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.Header p{
+  margin: 20px 0;
+  cursor: pointer;
+}
 
 .characters-all{
   margin: auto;
