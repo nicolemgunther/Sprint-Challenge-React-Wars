@@ -9,6 +9,7 @@ body {
   background-image: url('./sw-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 25%;
-  min-height: 100vh;
+  background-position: 10%;
+  background-attachment: fixed;
+  height: 100vh;
 }

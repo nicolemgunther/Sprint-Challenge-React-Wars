@@ -7,7 +7,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      theme: {
+        darkside: false
+      }
     };
   }
 
@@ -30,14 +33,36 @@ class App extends Component {
         throw new Error(err);
       });
   };
+  
+  joinRebels = () =>{
+    if (this.state.theme.darkside === true){
+      this.setState({
+        theme: {darkside: false}
+      }); 
+    }
+  }
+
+  joinEmpire = () =>{
+    if (this.state.theme.darkside === false){
+      this.setState({
+        theme: {darkside: true}
+      }); 
+    }
+  }
 
   render() {
     return (
       <div className="App">
-        <SWHeader />
-        <div className="characters-all">
-          <SWCardList starwarsChars = {this.state.starwarsChars} />
-        </div>
+        <SWHeader
+          joinEmpire={this.joinEmpire}
+          joinRebels={this.joinRebels}
+          theme = {this.state.theme}
+        />
+        
+        <SWCardList
+          starwarsChars = {this.state.starwarsChars}
+          theme = {this.state.theme}
+        />
       </div>
     );
   }
