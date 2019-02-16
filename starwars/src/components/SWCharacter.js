@@ -12,7 +12,7 @@ const SWCharacter = props => {
     const empire = {
         backgroundColor: "black",
         color: "white",
-        boxShadow: "inset 0 0 15px 5px darkslategrey"
+        boxShadow: "inset 0 0 15px 5px dimgrey"
     }
 
     return (
