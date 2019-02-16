@@ -5,15 +5,25 @@
 .Header{
   margin: auto;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
+
 /* write your parent styles in here for your App.js */
 
 .Header h1{
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
-  margin: 20px;
   cursor: default;
+}
+
+@media (min-width: 400px){
+  .Header{
+    flex-flow: row wrap;
+  }
+
+  .Header h1{
+    margin: 20px;
+  }
 }
