@@ -1,0 +1,49 @@
+.card-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+@media (min-width: 1535px){
+    .card-list{
+        width: 80%;
+    }
+}
+
+.character-card{
+    transition: 1s;
+    padding:5px;
+    margin: 10px;
+    width: 275px;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
+.character-card li{
+    text-align: left;
+    margin: 10px 20px 20px;
+}
+
+.logo-container{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    opacity: 0.5;
+    width: 50px;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 20px white, 0 0 15px white;
+}
+
+.logo:hover{
+    opacity: 1;
+    width: 60px;
+}

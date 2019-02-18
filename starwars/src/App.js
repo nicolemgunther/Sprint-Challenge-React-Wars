@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import SWCardList from './components/SWCardList';
+import SWHeader from './components/SWHeader';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      theme: {
+        darkside: false
+      }
     };
   }
 
   componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people');
+    this.getCharacters('https://swapi.co/api/people/');
   }
 
   getCharacters = URL => {
@@ -28,11 +33,36 @@ class App extends Component {
         throw new Error(err);
       });
   };
+  
+  joinRebels = () =>{
+    if (this.state.theme.darkside === true){
+      this.setState({
+        theme: {darkside: false}
+      }); 
+    }
+  }
+
+  joinEmpire = () =>{
+    if (this.state.theme.darkside === false){
+      this.setState({
+        theme: {darkside: true}
+      }); 
+    }
+  }
 
   render() {
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
+        <SWHeader
+          joinEmpire={this.joinEmpire}
+          joinRebels={this.joinRebels}
+          theme = {this.state.theme}
+        />
+        
+        <SWCardList
+          starwarsChars = {this.state.starwarsChars}
+          theme = {this.state.theme}
+        />
       </div>
     );
   }

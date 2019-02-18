@@ -1,7 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('./sw-bg.jpg');
+  background-image: url('./components/img/mobile-bg.jpg');
   background-size: cover;
+  height: 100vh;
+}
+
+@media (min-width: 501px){
+  body{
+    background-image: url('./sw-bg.jpg');
+    background-position: 10%;
+    height: auto;
+    min-height: 100vh;
+  }
 }
